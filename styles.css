@@ -55,3 +55,10 @@ footer {
     transform: translateY(-50%);
     height: 40px; /* Ajusta este valor según el tamaño deseado */
 }
+
+.linea-header {
+    display: block;
+    margin: 10px auto 0 auto;
+    max-width: 100%;
+    height: auto;
+}
