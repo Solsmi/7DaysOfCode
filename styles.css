@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
 }
 
 h3 {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 ul {
@@ -41,6 +41,19 @@ li {
     margin: 5px 0;
     padding: 10px;
     border-radius: 3px;
+}
+
+h5 {
+    margin: 20px 10px;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 60px;
+}
+
+p {
+    margin: 10px;
+    line-height: 1.5;
+    color: #555;
 }
 
 footer {
@@ -57,7 +70,7 @@ footer {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    height: 40px; /* Ajusta este valor según el tamaño deseado */
+    height: 40px;
 }
 
 .linea-header {
@@ -66,3 +79,4 @@ footer {
     max-width: 100%;
     height: auto;
 }
+
