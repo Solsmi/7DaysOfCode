@@ -41,17 +41,11 @@ footer {
     color: var(--color-secondary);
     padding: 10px 0;
 }
+
 .logo-header {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
     height: 40px;
-}
-
-.linea-header {
-    display: block;
-    margin: 10px auto 0 auto;
-    max-width: 100%;
-    height: auto;
 }
