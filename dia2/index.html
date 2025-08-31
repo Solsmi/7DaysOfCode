@@ -14,7 +14,29 @@
         <img src="linea2.png" alt="Línea decorativa" class="linea-header">
     </header>
     <main>
-            
+        <body>
+    <div class="container">
+        <div class="header">
+            <h2>Chat Interactivo</h2>
+            <p class="subtitle">Responde las preguntas para conocerte mejor</p>
+        </div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                ¡Hola! Vamos a conocernos mejor. Por favor, responde las siguientes preguntas.
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Escribe tu respuesta aquí...">
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>        
     </main>
     <script src="app.js"></script> 
     <footer>
