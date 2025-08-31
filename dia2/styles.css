@@ -64,7 +64,7 @@ footer {
 .container {
     width: 100%;
     max-width: 500px;
-    background-color: white;
+    background-color: var(--color-background);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -73,7 +73,7 @@ footer {
 
 .header {
     background: linear-gradient(to right, #6e8efb, #a777e3);
-    color: white;
+    color: var(--color-secondary);
     padding: 20px;
     text-align: center;
 }
@@ -84,7 +84,7 @@ footer {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    background-color: #f5f7fb;
+    background-color: var(--color-background);
 }
 
 .message {
