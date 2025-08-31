@@ -50,6 +50,14 @@ footer {
     height: 40px;
 }
 
+.linea-header {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+}
+
 
 .dias-container {
     display: flex;
