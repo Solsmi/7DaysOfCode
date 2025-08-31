@@ -14,7 +14,58 @@
         <img src="linea3.png" alt="Línea decorativa" class="linea-header">
     </header>
     <main>
-            
+        <div class="container">
+        <h1>Camino del Desarrollador</h1>
+        
+        <!-- Pantalla inicial -->
+        <div id="screen-1">
+            <p>¡Bienvenido al juego de decisiones de desarrollo! Tu primera elección es crucial para tu camino.</p>
+            <div class="options">
+                <button class="btn" onclick="selectOption('frontend')">Seguir hacia el área de Front-End</button>
+                <button class="btn" onclick="selectOption('backend')">Seguir hacia el área de Back-End</button>
+            </div>
+        </div>
+        
+        <!-- Pantalla de Front-End -->
+        <div id="screen-frontend" class="hidden">
+            <p>Has elegido el camino de Front-End. ¿Qué framework te gustaría aprender?</p>
+            <div class="options">
+                <button class="btn" onclick="selectFramework('React')">Aprender React</button>
+                <button class="btn" onclick="selectFramework('Vue')">Aprender Vue</button>
+            </div>
+        </div>
+        
+        <!-- Pantalla de Back-End -->
+        <div id="screen-backend" class="hidden">
+            <p>Has elegido el camino de Back-End. ¿Qué lenguaje te gustaría aprender?</p>
+            <div class="options">
+                <button class="btn" onclick="selectFramework('C#')">Aprender C#</button>
+                <button class="btn" onclick="selectFramework('Java')">Aprender Java</button>
+            </div>
+        </div>
+        
+        <!-- Pantalla de especialización -->
+        <div id="screen-specialization" class="hidden">
+            <p id="specialization-text">Ahora debes decidir cómo continuar tu desarrollo profesional.</p>
+            <div class="options">
+                <button class="btn" onclick="selectSpecialization('especializarse')">Especializarme en el área elegida</button>
+                <button class="btn" onclick="selectSpecialization('fullstack')">Desarrollarme para convertirme en Fullstack</button>
+            </div>
+        </div>
+        
+        <!-- Pantalla final para agregar tecnologías -->
+        <div id="screen-tech" class="hidden">
+            <div class="message">
+                <p id="final-message"></p>
+            </div>
+            <p>¿En qué tecnologías te gustaría especializarte o conocer?</p>
+            <div class="options">
+                <button class="btn" onclick="addTechnology()">Agregar Tecnología</button>
+                <button class="btn restart-btn" onclick="finishGame()">Finalizar</button>
+            </div>
+            <ul id="tech-list" class="tech-list"></ul>
+        </div>
+    </div>        
     </main>
     <script src="app.js"></script> 
     <footer>
