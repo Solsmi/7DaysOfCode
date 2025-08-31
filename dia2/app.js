@@ -3,6 +3,7 @@
 //const edad = prompt('¿Cuántos años tienes?');
 //const lenguaje = prompt('¿Qué lenguaje de programación estás estudiando?');
 //alert(`Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`);
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatContainer = document.getElementById('chatContainer');
     const userInput = document.getElementById('userInput');
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentQuestion = 0;
     let userData = [];
+    let additionalQuestionAsked = false;
     
     // Mostrar la primera pregunta después de un breve retraso
     setTimeout(() => {
@@ -31,6 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             typingIndicator.style.display = 'none';
             addMessage(questions[currentQuestion], 'bot');
+        }, 1500);
+    }
+    
+    function askAdditionalQuestion() {
+        // Mostrar indicador de escribiendo
+        typingIndicator.style.display = 'block';
+        
+        // Ocultar indicador después de un retraso y mostrar la pregunta adicional
+        setTimeout(() => {
+            typingIndicator.style.display = 'none';
+            const language = userData[2];
+            addMessage(`¿Te gusta estudiar ${language}? Responde con el número 1 para SÍ o 2 para NO.`, 'bot');
         }, 1500);
     }
     
@@ -55,6 +69,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const answer = userInput.value.trim();
         
         if (answer === '') return;
+        
+        // Si se ha hecho la pregunta adicional, procesar esa respuesta
+        if (additionalQuestionAsked) {
+            // Añadir respuesta del usuario al chat
+            addMessage(answer, 'user');
+            
+            // Limpiar el input
+            userInput.value = '';
+            
+            // Procesar la respuesta
+            if (answer === '1') {
+                addMessage("¡Muy bien! Sigue estudiando y tendrás mucho éxito.", 'bot');
+            } else if (answer === '2') {
+                addMessage("Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?", 'bot');
+            } else {
+                // Si la respuesta no es 1 o 2, pedir una respuesta válida
+                addMessage("Por favor, responde con 1 para SÍ o 2 para NO.", 'bot');
+                return;
+            }
+            
+            // Añadir mensaje final después de un breve retraso
+            setTimeout(() => {
+                addMessage("¡Gracias por participar! 😊", 'bot');
+            }, 1000);
+            
+            return;
+        }
         
         // Añadir respuesta del usuario al chat
         addMessage(answer, 'user');
@@ -82,9 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     const summary = `¡Hola ${userData[0]}, tienes ${userData[1]} años y ya estás aprendiendo ${userData[2]}!`;
                     addMessage(summary, 'bot');
                     
-                    // Añadir mensaje final después de un breve retraso
+                    // Hacer la pregunta adicional después de un breve retraso
                     setTimeout(() => {
-                        addMessage("¡Gracias por participar! 😊", 'bot');
+                        askAdditionalQuestion();
+                        additionalQuestionAsked = true;
                     }, 1000);
                 }, 1500);
             }, 800);
