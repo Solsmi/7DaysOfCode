@@ -23,12 +23,104 @@ header {
 }
 
 main {
-    padding: 20px;
     max-width: 800px;
-    margin: 20px auto;
-    background-color: var(--color-secondary);
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.game-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.game-instructions {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.attempts-counter {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.input-container {
+    margin-bottom: 1.5rem;
+}
+
+.number-input {
+    padding: 0.8rem;
+    width: 100px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.number-input:focus {
+    border-color: #3498db;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin: 0.5rem;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-reset {
+    background-color: #e74c3c;
+}
+
+.btn-reset:hover {
+    background-color: #c0392b;
+}
+
+.message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
 }
 
 
