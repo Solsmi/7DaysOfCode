@@ -65,13 +65,13 @@ footer {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 20px auto 0 auto; /* Centrar el contenedor horizontalmente y agregar margen superior */
+    margin: 2px auto 0 auto; /* Centrar el contenedor horizontalmente y agregar margen superior */
 }
 
 .header {
     background: linear-gradient(to right, #6e8efb, #a777e3);
     color: var(--color-secondary);
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
