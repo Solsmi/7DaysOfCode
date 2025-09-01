@@ -4,14 +4,20 @@
     --color-secondary: #fff;
     --color-background: #f4f4f4;
     --color-list-item: #e2e2e2;
-    --color-text: #555;
+    --color-text: #55;
     --color-heading: #333;
 }
+
 body {
-    font-family: var(--font-family);
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-background);
+    background: linear-gradient(135deg, #f4f4f4 25%, transparent 25%) -10px 0,
+                linear-gradient(25deg, #f4f4f4 25%, transparent 25%) -10px 0,
+                linear-gradient(315deg, #f4f4f4 25%, transparent 25%),
+                linear-gradient(45deg, #f4f4f4 25%, transparent 25%);
+    background-size: 20px 20px;
+    background-color: #e0e0e0;
 }
 
 header {
@@ -26,25 +32,36 @@ main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
 }
 
 .game-container {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    animation: slideIn 0.8s ease-out;
 }
 
 .game-title {
     color: #2c3e50;
     margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .game-instructions {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     color: #555;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .attempts-counter {
@@ -64,45 +81,64 @@ main {
     font-size: 1.2rem;
     text-align: center;
     border: 2px solid #ddd;
-    border-radius: 5px;
+    border-radius: 25px;
     outline: none;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .number-input:focus {
     border-color: #3498db;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+    transform: scale(1.05);
 }
 
 .btn {
     padding: 0.8rem 1.5rem;
-    background-color: #3498db;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
     margin: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .btn-reset {
-    background-color: #e74c3c;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
 }
 
 .btn-reset:hover {
-    background-color: #c0392b;
+    background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .message {
     margin-top: 1.5rem;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
     display: none;
+    animation: bounceIn 0.5s;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.message::before {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
 }
 
 .success {
@@ -111,10 +147,18 @@ main {
     border: 1px solid #c3e6cb;
 }
 
+.success::before {
+    content: "🎉";
+}
+
 .error {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+}
+
+.error::before {
+    content: "❌";
 }
 
 .info {
@@ -123,16 +167,21 @@ main {
     border: 1px solid #bee5eb;
 }
 
+.info::before {
+    content: "ℹ️";
+}
+
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, #333 0%, #555 100%);
     color: var(--color-secondary);
     padding: 10px 0;
 }
+
 .logo-header {
     position: absolute;
     right: 10px;
@@ -146,4 +195,66 @@ footer {
     margin: 10px auto 0 auto;
     max-width: 100%;
     height: auto;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
