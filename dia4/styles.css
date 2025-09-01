@@ -148,7 +148,7 @@ main {
 }
 
 .success::before {
-    content: "🎉";
+    content: "🎉🥳👏";
 }
 
 .error {
@@ -158,7 +158,7 @@ main {
 }
 
 .error::before {
-    content: "❌";
+    content: "❌ 😭 😵";
 }
 
 .info {
