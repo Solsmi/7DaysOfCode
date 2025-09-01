@@ -9,12 +9,26 @@
 <body>
     <header>
         <h1>#7DAYSOFCODE</h1>
-        <h2>DIA 4 - </h2>
+        <h2>DIA 4 - Mas loops y randomización</h2>
         <img src="../imagenes/logo7daysofcode.png" alt="7DaysOfCode Logo" class="logo-header">
         <img src="linea4.png" alt="Línea decorativa" class="linea-header">
     </header>
     <main>
+         <div class="game-container">
+            <h2 class="game-title">Adivina el Número</h2>
+            <p class="game-instructions">Estoy pensando en un número entre 0 y 10. Tienes 3 intentos para adivinarlo. ¡Buena suerte!</p>
             
+            <div class="attempts-counter" id="attempts">Intentos restantes: 3</div>
+            
+            <div class="input-container">
+                <input type="number" id="guessInput" class="number-input" min="0" max="10" required>
+                <button id="guessButton" class="btn">Adivinar</button>
+            </div>
+            
+            <div id="message" class="message"></div>
+            
+            <button id="resetButton" class="btn btn-reset">Reiniciar Juego</button>
+        </div>        
     </main>
     <script src="app.js"></script> 
     <footer>
