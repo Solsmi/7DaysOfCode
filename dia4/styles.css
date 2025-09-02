@@ -12,12 +12,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f4f4f4 25%, transparent 25%) -10px 0,
-                linear-gradient(25deg, #f4f4f4 25%, transparent 25%) -10px 0,
-                linear-gradient(315deg, #f4f4f4 25%, transparent 25%),
-                linear-gradient(45deg, #f4f4f4 25%, transparent 25%);
-    background-size: 20px 20px;
-    background-color: #e0e0e0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-attachment: fixed;
 }
 
 header {
