@@ -42,7 +42,10 @@ btnAdd.addEventListener('click', addFoodItem);
 function showFoodInput() {
     initialQuestion.classList.add('hidden');
     foodInput.classList.remove('hidden');
-    foodName.focus();
+    // Retrasar el establecimiento del foco para evitar problemas con la transición
+    setTimeout(() => {
+        foodName.focus();
+    }, 300); // Retraso de 300ms, suficiente para que termine la transición
 }
 
 // Función para agregar un alimento a la lista
