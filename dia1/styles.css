@@ -5,8 +5,8 @@
     --color-background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     --color-list-item: #e2e2e2;
     --color-text: #555;
-    --color-heading: #333;
 }
+
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -30,6 +30,8 @@ main {
     background-color: var(--color-secondary);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    color: var(--color-primary)
 }
 
 h1, h2, h3, h4 {
@@ -52,19 +54,6 @@ li {
     border-radius: 3px;
 }
 
-h5 {
-    margin: 20px 10px;
-    font-size: 1.2em;
-    color: var(--color-heading);
-    margin-top: 60px;
-}
-
-p {
-    margin: 10px;
-    line-height: 1.5;
-    color: var(--color-text);
-}
-
 footer {
     position: fixed;
     bottom: 0;
@@ -74,6 +63,7 @@ footer {
     color: var(--color-secondary);
     padding: 10px 0;
 }
+
 .logo-header {
     position: absolute;
     right: 10px;
