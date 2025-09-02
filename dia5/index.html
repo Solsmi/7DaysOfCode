@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7DAYSOFCODE-DIA5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +15,47 @@
         <img src="linea5.png" alt="Línea decorativa" class="linea-header">
     </header>
     <main>
+        <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
+            <p>Organiza tus compras por categorías</p>
+        </div>
+        
+        <div class="content">
+            <div id="initial-question" class="question">
+                <p>¿Deseas agregar un alimento a tu lista?</p>
+                <div class="buttons">
+                    <button id="btn-yes" class="btn-yes"><i class="fas fa-check"></i> Sí</button>
+                    <button id="btn-no" class="btn-no"><i class="fas fa-times"></i> No</button>
+                </div>
+            </div>
             
+            <div id="food-input" class="hidden">
+                <p>¿Qué alimento deseas agregar?</p>
+                <input type="text" id="food-name" placeholder="Ej: manzana, leche, pan...">
+                
+                <p>Selecciona la categoría:</p>
+                <select id="food-category">
+                    <option value="frutas">Frutas y Verduras</option>
+                    <option value="lacteos">Lácteos</option>
+                    <option value="congelados">Congelados</option>
+                    <option value="dulces">Dulces y Golosinas</option>
+                    <option value="carnes">Carnes y Pescados</option>
+                    <option value="panaderia">Panadería</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="limpieza">Limpieza del Hogar</option>
+                    <option value="otros">Otros</option>
+                </select>
+                
+                <button id="btn-add" class="btn-add"><i class="fas fa-plus"></i> Agregar alimento</button>
+            </div>
+            
+            <div id="shopping-list" class="shopping-list hidden">
+                <h2 style="text-align: center; margin-bottom: 15px;">Tu Lista de Compras</h2>
+                <div id="categories-container" class="compact-view"></div>
+            </div>
+        </div>
+    </div>
     </main>
     <script src="app.js"></script> 
     <footer>
