@@ -26,13 +26,36 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 20px auto;
-    background-color: var(--color-secondary);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-items: center;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    
+}
+
+.title-section {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.title-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .content {
-    padding: 20px;
+    padding: 10px;
 }
 
 .question {
@@ -114,14 +137,20 @@ input:focus, select:focus {
 }
 
 .shopping-list {
-    margin-top: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .category {
     margin-bottom: 15px;
     background-color: #f8f9fa;
-    padding: 12px 15px;
-    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
@@ -139,17 +168,21 @@ input:focus, select:focus {
 .items {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
 }
 
 .item {
     background: linear-gradient(to right, #3498db, #2c3e50);
     color: white;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.85rem;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .item i {
@@ -175,9 +208,9 @@ input:focus, select:focus {
 }
 
 .compact-view {
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 .compact-view::-webkit-scrollbar {
@@ -193,7 +226,6 @@ input:focus, select:focus {
     background: #3498db;
     border-radius: 10px;
 }
-
 
 footer {
     position: fixed;
