@@ -2,16 +2,17 @@
     --font-family: var(--font-family);
     --color-primary: #333;
     --color-secondary: #fff;
-    --color-background: #f4f4f4;
+    --color-background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);;
     --color-list-item: #e2e2e2;
     --color-text: #555;
+    --color-button: #f4f4f4;
     --color-transition: #e2e964;
 }
 body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: var(--color-background);
     background-attachment: fixed;
 }
 
@@ -71,7 +72,7 @@ footer {
 .dia-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--color-background);
+    background-color: var(--color-button);
     color: var(--color-text);
     text-decoration: none;
     border-radius: 5px;
