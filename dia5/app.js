@@ -7,7 +7,6 @@ let shoppingItems = {
     carnes: [],
     panaderia: [],
     bebidas: [],
-    limpieza: [],
     otros: []
 };
 
@@ -20,7 +19,6 @@ const categoryIcons = {
     carnes: 'fas fa-drumstick-bite',
     panaderia: 'fas fa-bread-slice',
     bebidas: 'fas fa-wine-bottle',
-    limpieza: 'fas fa-pump-soap',
     otros: 'fas fa-ellipsis-h'
 };
 
@@ -110,7 +108,6 @@ function getCategoryName(categoryKey) {
         carnes: 'Carnes y Pescados',
         panaderia: 'Panadería',
         bebidas: 'Bebidas',
-        limpieza: 'Limpieza del Hogar',
         otros: 'Otros'
     };
     
