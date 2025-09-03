@@ -30,7 +30,7 @@ header {
 main {
     padding: 20px;
     max-width: 800px;
-    margin: 20px auto 50px auto; /* Agregado margen inferior para el footer */
+    margin: 20px auto 80px auto; /* Aumentado margen inferior para crear espacio con el footer */
     justify-items: center;
 }
 
@@ -48,18 +48,18 @@ main {
 .title-section {
     background: linear-gradient(to right, #4b6cb7, #182848);
     color: var(--color-secondary);
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     border-radius: 20px 20px 0 0; /* Bordes redondeados en la parte superior */
 }
 
 .title-section h1 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    font-size: 1.6rem;
+    margin-bottom: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .content {
@@ -90,6 +90,7 @@ button {
     display: flex;
     align-items: center;
     gap: 5px;
+    
 }
 
 .btn-yes {
@@ -163,7 +164,7 @@ input:focus, select:focus {
 .category {
     margin-bottom: 15px;
     background-color: #f8f9fa;
-    padding: 15px;
+    padding: 5px;
     border: 1px solid #e9ecef;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -173,7 +174,7 @@ input:focus, select:focus {
     font-size: 1.1rem;
     color: #2c3e50;
     margin-bottom: 8px;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     border-bottom: 1px solid #3498db;
     display: flex;
     align-items: center;
@@ -183,7 +184,7 @@ input:focus, select:focus {
 .items {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
     margin-top: 10px;
     align-items: flex-start;
 }
@@ -191,10 +192,10 @@ input:focus, select:focus {
 .item {
     background-color: #e2e2e2;
     color: var(--color-primary);
-    padding: 8px 15px;
+    padding: 4px 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
@@ -262,7 +263,7 @@ footer {
     text-align: center;
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    padding: 10px 0;
+    padding: 20px 0 10px 0; /* Aumentado padding-top para crear espacio con el main */
     
 }
 .logo-header {
