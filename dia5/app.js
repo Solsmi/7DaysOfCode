@@ -86,8 +86,8 @@ function showShoppingList() {
             <div class="category">
                 <h3 class="category-title"><i class="${iconClass}"></i> ${categoryName}</h3>
                 <div class="items">
-                    ${items.length > 0 
-                        ? items.map(item => `<span class="item"><i class="fas fa-check"></i> ${item}</span>`).join('') 
+                    ${items.length > 0
+                        ? items.map(item => `<span class="item" data-category="${category}" data-item="${item}"><i class="fas fa-check"></i> ${item}</span>`).join('')
                         : '<span class="empty">No hay items en esta categoría</span>'
                     }
                 </div>
@@ -96,6 +96,18 @@ function showShoppingList() {
     }
     
     categoriesContainer.innerHTML = html;
+    
+    // Agregar event listeners a los items
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => {
+        item.addEventListener('click', toggleItemActive);
+    });
+}
+
+// Función para alternar el estado activo de un item
+function toggleItemActive(event) {
+    const item = event.target.closest('.item');
+    item.classList.toggle('active');
 }
 
 // Función para obtener el nombre legible de la categoría
