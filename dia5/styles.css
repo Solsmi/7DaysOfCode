@@ -193,7 +193,7 @@ input:focus, select:focus {
     margin-top: 0;
     align-items: center;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .item {
@@ -231,10 +231,11 @@ input:focus, select:focus {
     color: #7f8c8d;
     font-style: italic;
     font-size: 1rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     line-height: 1.2;
-    padding: 4px 10px;
+    padding: 4px 100px;
+    margin-left: auto;
 }
 
 .icon {
