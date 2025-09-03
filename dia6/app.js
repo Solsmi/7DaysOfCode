@@ -30,6 +30,8 @@ const foodCategory = document.getElementById('food-category');
 const btnAdd = document.getElementById('btn-add');
 const shoppingList = document.getElementById('shopping-list');
 const categoriesContainer = document.getElementById('categories-container');
+const shoppingListButtons = document.getElementById('shopping-list-buttons');
+const btnEditList = document.getElementById('btn-edit-list');
 const btnRemove = document.getElementById('btn-remove');
 
 // Event Listeners
@@ -37,6 +39,7 @@ document.getElementById('btn-yes').addEventListener('click', showFoodInput);
 document.getElementById('btn-no').addEventListener('click', showShoppingList);
 btnAdd.addEventListener('click', addFoodItem);
 btnRemove.addEventListener('click', showRemoveItem);
+btnEditList.addEventListener('click', editShoppingList);
 
 // Función para mostrar el input de alimento
 function showFoodInput() {
@@ -181,6 +184,21 @@ function addFoodItem() {
     items.forEach(item => {
         item.addEventListener('click', toggleItemActive);
     });
+    
+    // Mostrar los botones de la lista de compras
+    shoppingListButtons.classList.remove('hidden');
+}
+
+// Función para editar la lista de compras
+function editShoppingList() {
+    // Ocultar la lista de compras
+    shoppingList.classList.add('hidden');
+    
+    // Mostrar la pregunta inicial
+    initialQuestion.classList.remove('hidden');
+    
+    // Ocultar los botones de la lista de compras
+    shoppingListButtons.classList.add('hidden');
 }
 
 // Función para confirmar la eliminación de un elemento
