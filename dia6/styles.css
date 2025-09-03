@@ -113,6 +113,19 @@ button {
     transform: translateY(-2px);
 }
 
+.btn-remove {
+    background-color: #e74c3c;
+    color: var(--color-secondary);
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
 .btn-add {
     background-color: #3498db;
     color: var(--color-secondary);
