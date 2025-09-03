@@ -82,3 +82,21 @@ footer {
 .dia-button:hover {
     background-color: var(--color-transition);
 }
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .logo-header {
+        position: static;
+        transform: none;
+        margin: 10px auto;
+        display: block;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
