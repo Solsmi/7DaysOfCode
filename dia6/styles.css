@@ -80,6 +80,10 @@ main {
     justify-content: center;
 }
 
+#remove-item-container .buttons {
+    margin-bottom: 10px;
+}
+
 button {
     padding: 10px 20px;
     border: none;
@@ -116,9 +120,10 @@ button {
 .btn-remove {
     background-color: #e74c3c;
     color: var(--color-secondary);
-    margin-top: 15px;
-    width: 100%;
+    margin: 15px auto;
+    width: auto;
     justify-content: center;
+    max-width: 300px;
 }
 
 .btn-remove:hover {
@@ -129,7 +134,9 @@ button {
 .btn-add {
     background-color: #3498db;
     color: var(--color-secondary);
-    width: 100%;
+    width: auto;
+    max-width: 300px;
+    margin: 0 auto;
     justify-content: center;
 }
 

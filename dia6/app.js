@@ -104,20 +104,22 @@ function addFoodItem() {
         }
         
         if (allItems.length > 0) {
-            html += '<ul>';
-            allItems.forEach((item, index) => {
-                html += `<li>${item}</li>`;
-            });
-            html += '</ul>';
-            
-            html += '<p>Ingresa el nombre del alimento que deseas eliminar:</p>';
-            html += '<input type="text" id="remove-item-input" placeholder="Ej: manzana">';
-            html += '<button id="confirm-remove-btn" class="btn-add">Eliminar</button>';
-            html += '<button id="cancel-remove-btn" class="btn-no">Cancelar</button>';
-        } else {
-            html += '<p>No hay elementos en la lista.</p>';
-            html += '<button id="cancel-remove-btn" class="btn-no">Volver</button>';
-        }
+                html += '<ul>';
+                allItems.forEach((item, index) => {
+                    html += `<li>${item}</li>`;
+                });
+                html += '</ul>';
+                
+                html += '<p>Ingresa el nombre del alimento que deseas eliminar:</p>';
+                html += '<input type="text" id="remove-item-input" placeholder="Ej: manzana">';
+                html += '<div class="buttons">';
+                html += '<button id="confirm-remove-btn" class="btn-add">Eliminar</button>';
+                html += '<button id="cancel-remove-btn" class="btn-no">Cancelar</button>';
+                html += '</div>';
+            } else {
+                html += '<p>No hay elementos en la lista.</p>';
+                html += '<button id="cancel-remove-btn" class="btn-no">Volver</button>';
+            }
         
         html += '</div>';
         
