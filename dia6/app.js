@@ -61,6 +61,14 @@ function addFoodItem() {
         return;
     }
     
+    // Verificar si el elemento ya existe en la lista
+    if (itemExists(name)) {
+        alert('Este elemento ya existe en la lista.');
+        foodName.value = '';
+        foodName.focus();
+        return;
+    }
+    
     // Agregar el alimento a la categoría correspondiente
     shoppingItems[category].push(name);
     
@@ -69,19 +77,28 @@ function addFoodItem() {
     foodName.focus();
     
     // Volver a la pregunta inicial
-        foodInput.classList.add('hidden');
-        initialQuestion.classList.remove('hidden');
-        
-        // Mostrar el botón de eliminar si hay elementos en la lista
-        if (hasItemsInList()) {
-            btnRemove.classList.remove('hidden');
-        }
+    foodInput.classList.add('hidden');
+    initialQuestion.classList.remove('hidden');
+    
+    // Mostrar el botón de eliminar si hay elementos en la lista
+    if (hasItemsInList()) {
+        btnRemove.classList.remove('hidden');
     }
+}
     
     // Función para verificar si hay elementos en la lista
     function hasItemsInList() {
         for (const category in shoppingItems) {
             if (shoppingItems[category].length > 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+    // Función para verificar si un elemento ya existe en la lista
+    function itemExists(itemName) {
+        for (const category in shoppingItems) {
+            if (shoppingItems[category].includes(itemName)) {
                 return true;
             }
         }
