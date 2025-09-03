@@ -277,7 +277,7 @@ footer {
     text-align: center;
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    padding: 20px 0 10px 0; /* Aumentado padding-top para crear espacio con el main */
+    padding: 0px;
     
 }
 .logo-header {
