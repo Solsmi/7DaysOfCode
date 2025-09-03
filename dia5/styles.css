@@ -231,11 +231,12 @@ input:focus, select:focus {
     color: #7f8c8d;
     font-style: italic;
     font-size: 1rem;
-    display: inline-flex;
+    display: block;
     align-items: center;
     line-height: 1.2;
-    padding: 4px 100px;
-    margin-left: auto;
+    padding: 4px 10px;
+    width: 100%;
+    text-align: right;
 }
 
 .icon {
