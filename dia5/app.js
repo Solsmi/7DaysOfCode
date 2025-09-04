@@ -124,6 +124,7 @@ function getCategoryName(categoryKey) {
     };
     
     return categoryNames[categoryKey] || 'Otros';
+}
 
 // Funcionalidad de navegación para el botón de menú
 document.addEventListener('DOMContentLoaded', function() {
@@ -135,4 +136,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-}
