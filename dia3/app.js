@@ -125,6 +125,7 @@ function finishGame() {
 document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
+    const menuButton = document.getElementById('menu-button');
     
     if (prevButton) {
         prevButton.addEventListener('click', function() {
@@ -135,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nextButton) {
         nextButton.addEventListener('click', function() {
             window.location.href = '../dia4/index.html';
+        });
+    }
+    
+    if (menuButton) {
+        menuButton.addEventListener('click', function() {
+            window.location.href = '../index.html';
         });
     }
 });
