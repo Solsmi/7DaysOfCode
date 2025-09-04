@@ -80,7 +80,7 @@ main {
     justify-content: center;
 }
 
-button:not(#menu-button) {
+button:not(#menu-button):not(.nav-button) {
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
