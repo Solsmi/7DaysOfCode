@@ -29,9 +29,25 @@ if (numeroDiez == stringDiez) {
 // Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes
 // Las variables numeroTreinta y stringTreinta no tienen el mismo tipo
 
-// Funcionalidad de navegación para el botón de menú
+// Funcionalidad de navegación para los botones del header
 document.addEventListener('DOMContentLoaded', function() {
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
     const menuButton = document.getElementById('menu-button');
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            // Como es el día 1, no hay página anterior
+            // Podemos redirigir al último día o mostrar un mensaje
+            window.location.href = '../dia7/index.html';
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            window.location.href = '../dia2/index.html';
+        });
+    }
     
     if (menuButton) {
         menuButton.addEventListener('click', function() {

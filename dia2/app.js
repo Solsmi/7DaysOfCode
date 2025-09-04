@@ -150,8 +150,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Funcionalidad de navegación para el botón de menú
+    // Funcionalidad de navegación para los botones del header
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
     const menuButton = document.getElementById('menu-button');
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            window.location.href = '../dia1/index.html';
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            window.location.href = '../dia3/index.html';
+        });
+    }
     
     if (menuButton) {
         menuButton.addEventListener('click', function() {
