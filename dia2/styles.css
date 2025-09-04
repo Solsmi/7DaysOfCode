@@ -131,7 +131,7 @@ input {
     min-height: 44px; /* Altura mínima recomendada para elementos táctiles */
 }
 
-button {
+button:not(.menu-button):not(.nav-button) {
     background: var(--color-message-user);
     color: var(--color-secondary);
     border: none;
@@ -145,7 +145,7 @@ button {
     min-width: 4px; /* Ancho mínimo recomendado para elementos táctiles */
 }
 
-button:hover {
+button:not(.menu-button):not(.nav-button):hover {
     transform: scale(1.05);
 }
 
