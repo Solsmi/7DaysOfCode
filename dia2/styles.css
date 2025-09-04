@@ -1,5 +1,5 @@
 :root {
-    --font-family: var(--font-family);
+    --font-family: Arial, sans-serif;
     --color-primary: #333;
     --color-secondary: #fff;
     --color-background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
@@ -31,7 +31,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Alinear al inicio (arriba) */
-    min-height: calc(100vh - 140px); /* Ajustar para compensar header y footer */
+    flex: 1; /* Permitir que crezca para llenar el espacio disponible */
 }
 
 
@@ -68,6 +68,9 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 2px auto 0 auto; /* Centrar el contenedor horizontalmente y agregar margen superior */
+    display: flex;
+    flex-direction: column;
+    height: 60vh; /* Ajustar la altura para diferentes tamaños de pantalla */
 }
 
 .header {
@@ -78,12 +81,13 @@ footer {
 }
 
 .chat-container {
-    height: 400px;
+    flex: 1;
     padding: 20px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     background-color: var(--color-secondary);
+    min-height: 300px; /* Altura mínima para dispositivos pequeños */
 }
 
 .message {
@@ -114,15 +118,17 @@ footer {
     padding: 15px;
     background-color: var(--color-secondary);
     border-top: 1px solid #e0e0e0;
+    flex-shrink: 0; /* Evitar que se comprima */
 }
 
 input {
     flex: 1;
-    padding: 12px 15px;
+    padding: 15px 20px; /* Aumentar el padding para mejor usabilidad táctil */
     border: 1px solid #ddd;
     border-radius: 25px;
     outline: none;
-    font-size: 16px;
+    font-size: 16px; /* Mantener tamaño adecuado para dispositivos móviles */
+    min-height: 44px; /* Altura mínima recomendada para elementos táctiles */
 }
 
 button {
@@ -130,11 +136,13 @@ button {
     color: var(--color-secondary);
     border: none;
     border-radius: 25px;
-    padding: 12px 25px;
+    padding: 15px 25px; /* Aumentar el padding para mejor usabilidad táctil */
     margin-left: 10px;
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.2s;
+    min-height: 44px; /* Altura mínima recomendada para elementos táctiles */
+    min-width: 4px; /* Ancho mínimo recomendado para elementos táctiles */
 }
 
 button:hover {
@@ -202,6 +210,7 @@ h2 {
         transform: none;
         margin: 10px auto;
         display: block;
+        height: 30px; /* Ajustar tamaño para móviles */
     }
     
     .linea-header {
@@ -214,5 +223,98 @@ h2 {
     
     header h2 {
         font-size: 1.2rem;
+    }
+    
+    
+    .container {
+        height: 80vh; /* Ajustar altura en móviles */
+        margin: 2px 10px 0 10px; /* Agregar márgenes laterales */
+    }
+    main {
+        padding: 10px; /* Reducir padding en móviles */
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+/* Media query para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+    .logo-header {
+        height: 25px; /* Ajustar tamaño para móviles pequeños */
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    header h2 {
+        font-size: 1rem;
+    }
+    
+    .header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .container {
+        border-radius: 15px; /* Reducir border-radius en móviles pequeños */
+        height: 70vh; /* Ajustar altura en móviles pequeños */
+    }
+    
+    .chat-container {
+        padding: 15px; /* Reducir padding en móviles pequeños */
+    }
+    
+    input {
+        padding: 12px 15px; /* Ajustar padding en móviles pequeños */
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 12px 20px; /* Ajustar padding en móviles pequeños */
+        font-size: 14px;
+    }
+    
+    .message {
+        max-width: 90%; /* Aumentar ancho relativo en móviles pequeños */
+        padding: 10px 12px; /* Reducir padding en móviles pequeños */
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+/* Media query para tablets y dispositivos medianos */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 600px; /* Ajustar ancho máximo para tablets */
+        height: 50vh; /* Ajustar altura para tablets */
+    }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 700px; /* Ajustar ancho máximo para pantallas grandes */
+        height: 60vh; /* Ajustar altura para pantallas grandes */
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 0px;
     }
 }
