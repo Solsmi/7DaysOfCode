@@ -120,3 +120,21 @@ function finishGame() {
         location.reload();
     }
 }
+
+// Funcionalidad de navegación para los botones del header
+document.addEventListener('DOMContentLoaded', function() {
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            window.location.href = '../dia2/index.html';
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            window.location.href = '../dia4/index.html';
+        });
+    }
+});
