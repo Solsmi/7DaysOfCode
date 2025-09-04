@@ -27,7 +27,7 @@ function calculadora() {
         
         // Verificar si el usuario canceló
         if (operacion === null) {
-            alert("Hasta la próxima");
+            alert("Hasta la próxima!");
             // Recargar la página para mostrar nuevamente el botón de iniciar calculadora
             window.location.reload();
             break;
