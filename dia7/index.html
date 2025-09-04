@@ -19,9 +19,35 @@
                 </div>
             </header>
     <main>
-            
+        <div class="calculator">
+            <h2>Calculadora</h2>
+            <div class="operation-selection" id="operationSelection">
+                <h3>Elija la operación que desea realizar</h3>
+                <div class="operation-buttons">
+                    <button class="operation-btn" data-operation="suma">Suma</button>
+                    <button class="operation-btn" data-operation="resta">Resta</button>
+                    <button class="operation-btn" data-operation="multiplicacion">Multiplicación</button>
+                    <button class="operation-btn" data-operation="division">División</button>
+                </div>
+                <div class="exit-button">
+                    <button class="operation-btn exit-btn" data-operation="salir">Salir</button>
+                </div>
+            </div>
+            <div class="input-section" id="inputSection" style="display: none;">
+                <h3 id="inputTitle">Ingrese los valores</h3>
+                <input type="number" id="valor1" placeholder="Primer valor">
+                <input type="number" id="valor2" placeholder="Segundo valor" style="display: none;">
+                <button id="nextBtn">Siguiente</button>
+                <button id="backBtn">Volver</button>
+            </div>
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h3>Resultado</h3>
+                <p id="result"></p>
+                <button id="continueBtn">Continuar</button>
+            </div>
+        </div>
     </main>
-    <script src="app.js"></script> 
+    <script src="app.js"></script>
     <footer>
         <p>Hecho por Solange San Martin</p>
     </footer>
