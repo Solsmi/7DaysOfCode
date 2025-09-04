@@ -83,6 +83,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     resetButton.addEventListener('click', initGame);
     
+    // Funcionalidad de navegación para el botón de menú
+    const menuButton = document.getElementById('menu-button');
+    
+    if (menuButton) {
+        menuButton.addEventListener('click', function() {
+            window.location.href = '../index.html';
+        });
+    }
+    
     // Iniciar el juego cuando se carga la página
     initGame();
 });

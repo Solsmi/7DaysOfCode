@@ -28,4 +28,15 @@ if (numeroDiez == stringDiez) {
 // Resultados esperados:
 // Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes
 // Las variables numeroTreinta y stringTreinta no tienen el mismo tipo
+
+// Funcionalidad de navegación para el botón de menú
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu-button');
+    
+    if (menuButton) {
+        menuButton.addEventListener('click', function() {
+            window.location.href = '../index.html';
+        });
+    }
+});
 // Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes
