@@ -80,11 +80,18 @@ function addFoodItem() {
     foodInput.classList.add('hidden');
     initialQuestion.classList.remove('hidden');
     
-    // Mostrar el botón de eliminar si hay elementos en la lista
-    if (hasItemsInList()) {
-        btnRemove.classList.remove('hidden');
-    }
+    // Actualizar la visibilidad del botón de eliminar
+    updateRemoveButtonVisibility();
 }
+    
+    // Función para actualizar la visibilidad del botón de eliminar
+    function updateRemoveButtonVisibility() {
+        if (hasItemsInList()) {
+            btnRemove.style.display = 'flex'; // o 'block', 'inline-block', etc. según el estilo original
+        } else {
+            btnRemove.style.display = 'none';
+        }
+    }
     
     // Función para verificar si hay elementos en la lista
     function hasItemsInList() {
@@ -251,10 +258,8 @@ function confirmRemoveItem() {
         // Mostrar la pregunta inicial
         initialQuestion.classList.remove('hidden');
         
-        // Ocultar el botón de eliminar si no hay más elementos
-        if (!hasItemsInList()) {
-            btnRemove.classList.add('hidden');
-        }
+        // Actualizar la visibilidad del botón de eliminar
+        updateRemoveButtonVisibility();
     } else {
         alert('No se encontró el elemento en la lista');
     }
@@ -305,4 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '../index.html';
         });
     }
+    
+    // Actualizar la visibilidad del botón de eliminar al cargar la página
+    updateRemoveButtonVisibility();
 });
